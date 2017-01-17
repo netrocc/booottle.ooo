@@ -1,8 +1,62 @@
+html, body {
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100%;
+}
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  overflow:hidden;
+  font-family:sans-serif;
+  font-size:12px;
 }
 
-a {
-  color: #00B7FF;
+div#loading {
+  display:none;
+  position:absolute;
+  top:50%;
+  left:50%;
+  -webkit-transform:translate(-50%, -50%);
+  transform:translate(-50%, -50%);
+  width:200px;
 }
+div#loading .label {
+  color:#fff;
+  text-align:center;
+}
+div#bar {
+  width:0;
+  height:2px;
+  background-color:#ffffff;
+}
+
+div#stats {
+  position:absolute;
+  top:0;
+}
+
+#blocker {
+  position:absolute;
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,0.5);
+}
+#instructions {
+  width:100%;
+  height:100%;
+  display:-webkit-box;
+  display:-moz-box;
+  display:box;
+  -webkit-box-orient:horizontal;
+  -moz-box-orient:horizontal;
+  box-orient:horizontal;
+  -webkit-box-pack:center;
+  -moz-box-pack:center;
+  box-pack:center;
+  -webkit-box-align:center;
+  -moz-box-align:center;
+  box-align:center;
+  color:#ffffff;
+  text-align:center;
+  cursor:pointer;
+}
+

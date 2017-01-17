@@ -1,5 +1,11 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div#blocker
+    div#instructions
+      span(style='font-size:40px') Click to play
+      div (W,A,S,D = Move, SPACE = Jump, MOUSE = Look, CLICK = Shoot)
+
+  div#loading
+    div.label LOADING
+    div#bar
