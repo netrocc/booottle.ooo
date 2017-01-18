@@ -1,15 +1,17 @@
 # BOOOTTLE.OOO
 
-**Water Bottle Flip 3D**
+**OOO - Water Bottle Flip 3D**
 
 **[www.booottle.ooo]**
+
+The first real 3D bottle flip browser game
 
 [NETRO] 2017
 
 ----
 
 ### Version
-0.8.0
+1.0.0
 
 ### Tech
 BOOOTTLE.OOO uses a number of open source projects to work properly:
