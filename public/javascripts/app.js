@@ -585,7 +585,8 @@ function App() {
         enterPointerLock();
       }, false);
     } else {
-      instructions.innerHTML = 'Your browser doesn\'t seem to support Pointer Lock API';
+      document.getElementById('clickToPlay').style.display = 'none';
+      document.getElementById('message').style.display = 'block';
     }
   }
   

@@ -69,6 +69,12 @@ h2 {
   text-decoration:underline;
   margin:80px 0;
 }
+h3 {
+  font-size:40px;
+  font-weight:400;
+  font-style:italic;
+  margin:50px 0;
+}
 ul {
   list-style-type:none;
 }
@@ -104,4 +110,8 @@ a {
 div#stats {
   position:absolute;
   top:0;
+}
+
+h3#message {
+  display:none;
 }
