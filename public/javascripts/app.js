@@ -1,8 +1,8 @@
 /*
- * booottle.ooo
+ * OOO
+ * https://www.booottle.ooo
  * NETRO
  * https://netro.cc/
- *
  */
 
 function App() {
@@ -64,7 +64,7 @@ function App() {
   
   var loadMonitor;
   
-  var stats;
+  //var stats;
   
 
   /*
@@ -292,14 +292,7 @@ function App() {
         side: THREE.FrontSide,
         map: bottleTex
       });
-/*
-      var bottleMaterial = new THREE.MeshLambertMaterial({
-        color: 0xffffff,
-        emissive: 0x000022,
-        side: THREE.FrontSide,
-        map: bottleTex
-      });
-*/
+
       bottleMaterials.push(bottleMaterial);
     }
     
@@ -309,8 +302,8 @@ function App() {
     });
 
 
-    stats = new Stats();
-    element.appendChild(stats.domElement);
+    //stats = new Stats();
+    //element.appendChild(stats.domElement);
     
     THREE.DefaultLoadingManager.onProgress = function(item, loaded, total) {
       threeToLoad = total;
@@ -349,9 +342,8 @@ function App() {
         clock.start();
 
         loading.style.display = 'none';
-        instructions.style.display = '-webkit-box';
-        instructions.style.display = '-moz-box';
-        instructions.style.display = 'box';
+        instructions.style.display = 'block';
+        instructions.style.cursor = 'pointer';
       }, 500);
     }
     var barWidth = 100 * loaded / toLoad;
@@ -393,7 +385,7 @@ function App() {
     controls.update(delta);
     renderer.render(scene, camera);
 
-    stats.update();
+    //stats.update();
   }
 
 
@@ -570,10 +562,7 @@ function App() {
           blocker.style.display = 'none';
         } else {
           controls.enabled = false;
-          //instructions.style.display = '-webkit-box';
-          //instructions.style.display = '-moz-box';
-          //instructions.style.display = 'box';
-          blocker.style.display = 'inline';
+          blocker.style.display = 'block';
         }
       }
       
