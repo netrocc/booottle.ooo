@@ -81,18 +81,21 @@ function App() {
     bar = document.getElementById('bar');
     
     if (!Detector.webgl) {
-      Detector.addGetWebGLMessage();
+      //Detector.addGetWebGLMessage();
+      document.getElementById('clickToPlay').style.display = 'none';
+      document.getElementById('messageWebGL').style.display = 'block';
+      instructions.style.display = 'block';
     } else {
       loading.style.display = 'inline';
+
+      initSystem();
+      initCannon();
+      initThree();
+
+      loadMonitor = setInterval(loadingProgress, 40);
+
+      animate();
     }
-
-    initSystem();
-    initCannon();
-    initThree();
-
-    loadMonitor = setInterval(loadingProgress, 40);
-
-    animate();
   }
 
 
@@ -586,7 +589,7 @@ function App() {
       }, false);
     } else {
       document.getElementById('clickToPlay').style.display = 'none';
-      document.getElementById('message').style.display = 'block';
+      document.getElementById('messagePointerLock').style.display = 'block';
     }
   }
   
