@@ -421,7 +421,6 @@ function App() {
       var mouseUpTime = new Date();
       var timeDiff = mouseUpTime - mouseDownTime;
       shootVelo = timeDiff * 0.001 * 40;
-      console.log(shootVelo);
       throwBottle();
     }
   }
@@ -566,6 +565,7 @@ function App() {
         } else {
           controls.enabled = false;
           blocker.style.display = 'block';
+          clearSelection();
         }
       }
       
@@ -595,6 +595,15 @@ function App() {
   
   function enterPointerLock() {
     element.requestPointerLock();
+  }
+
+  function clearSelection() {
+    console.log("CLREA SELECTION");
+    if (document.selection) {
+      document.selection.empty();
+    } else if (window.getSelection) {
+      window.getSelection().removeAllRanges();
+    }
   }
 
   

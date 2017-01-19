@@ -10,9 +10,6 @@ The first real 3D bottle flip browser game.
 
 ----
 
-### Version
-1.0.1
-
 ### Tech
 BOOOTTLE.OOO uses a number of open source projects to work properly:
 
